@@ -8,8 +8,8 @@
 </div>
 <% if user_signed_in? && current_user.id == @post.user_id %>
   <div class="postManage">
-    <%= link_to "編集", edit_post_path(@post.id), class: "postManage__edit" %>
-    <%= link_to "削除", post_path(@post.id), method: :delete, class: "postManage__delete" %>
+    <%= link_to "Modificare", edit_post_path(@post.id), class: "postManage__edit" %>
+    <%= link_to "Elimina", post_path(@post.id), method: :delete, class: "postManage__delete" %>
   </div>
 <% end %>
 <div class="postText">
@@ -17,12 +17,12 @@
 </div>
 <div class="container">
     <% if current_user %>
-      <%= form_with(model: [@post, @comment], local: true) do |form| %>
-        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-        <%= form.submit "SEND" %>
+      <%= form_with(model: [@post, @comment], local: true, id: "new_comment") do |form| %>
+        <%= form.text_area :text, placeholder: "コメントする", rows: "2", class: "textbox" %>
+        <%= form.submit "SEND", class: "form__submit" %>
       <% end %>
     <% else %>
-      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+      <strong><p>※※※ Posting comments requires new registration / login ※※※</p></strong>
     <% end %>
 
     <div class="comments">
@@ -32,7 +32,7 @@
           <p>
             <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
             <%= comment.text %>
-          </p>
+          </p> 
         <% end %>
       <% end %>
     </div>

@@ -1,47 +1,57 @@
 body{
-  background-color: #f6f6f6;
+  background-image:url("https://assets.website-files.com/5bfd1275cc56e15ce750b18e/5c289afb9a15752f8f893a27_05.%20Flax.jpg");
   min-width: 650px;
   .header{
     height: 56px;
     width: 100%;
     padding: 0 150px;
-    background-color: #55c500;
+   background-color: #2a8a9169;
     color: #fff;
     display: flex;
     justify-content: space-between;
     &__title{
+      font-family: cursive;
       font-size: 30px;
       line-height: 56px;
       &--text{
         text-decoration: none;
-        color: #fff;
+        color: rgb(58, 26, 170);
       }
     }
     &__right{
+      font-family: monospace;
       &--btn{
         text-decoration: none;
         line-height: 56px;
-        color: #fff;
+        color: rgb(90, 80, 102);
         margin-left:15px;
       }
     }
   }
+  .navbar {
+    height: 50px;
+    width: 100%;
+    background-color:#6405a057;
+    text-align: center;
+    padding: 15px;
+    font-family: fantasy;
+  }
   .contents{
-    margin: 50px auto 0;
-    background-color: seashell;
     height: 600px;
-    width: 70%;
+    width: 80%;
     overflow: scroll;
     .content{
       padding: 10px;
-      border-bottom: 1px solid #f6f6f6;
+      border-bottom: 1px solid #f6f6f6f6;
       display: flex;
       &__left{
         padding-right: 20px;
         &--image{
-          height: 55px;
-          width: 55px;
-          border: solid 1px;
+          height: 20px;
+          width: 20px;
+          border: solid 16px;
+          background-color: black;
+          border-radius: 20px;
         }
       }
       &__right{
@@ -74,22 +84,24 @@ body{
         font-weight: bold;
         padding-top: 30px;
         text-align: center;
+        font-family: cursive;
       }
     }
     .postTitle{
       padding-top: 20px;
       text-align: center;
-      font-size: 20px;
+      font-size: 25px;
       font-weight: bold;
+      font-family: serif;
     }
     .postDate{
       font-size: 15px;
-      color: #999;
+      color: rgba(12, 22, 156, 0.863);
       text-align: center;
     }
     .postAuthor{
       font-size: 15px;
-      color: #999;
+      color: rgb(137, 44, 224);
       text-align: center;
     }
     .postManage{
@@ -98,23 +110,26 @@ body{
       margin-top: 10px;
       &__edit{
         display: block;
-        border-radius: 5px;
         color: #ffffff;
-        background-color:#55c500;
+        background-color:#081c8d;
         padding: 0 10px;
         text-decoration: none;
+        border-radius: 20px;
         margin-right: 10px;
       }
+     
       &__delete{
         display: block;
         border-radius: 5px;
         color: #ffffff;
-        background-color:#55c500;
+        background-color:#081c8d;
         padding: 0 10px;
         text-decoration: none;
+        border-radius: 20px;
         margin-left: 10px;
       }
     }
+    
     .postText{
       margin: 20px 30px;
     }
@@ -145,3 +160,18 @@ body{
     padding: 15px 30px;
   }
 }
+
+  .footer{
+    margin-top: 30px;
+    background-color: #6405a057;
+    height: 60px;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    font-family:cursive;
+  }
+
+  .form__submit{
+    background-color: rgb(95, 116, 148);
+  }
+
