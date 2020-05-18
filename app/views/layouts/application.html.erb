@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>my_Blog</title>
+    <title>Miyazaki.Disney-Life</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,10 +11,9 @@
   <body>
     <header class="header">
       <div class="header__title">
-        <%= link_to "my-blog", root_path, class: "header__title--text" %>
+        <%= link_to "Miyazaki,Disney-Life", root_path, class: "header__title--text" %>
       </div>
       <div class="header__right">
-      <%= link_to "Manager's room", "/owners/}" %>
       <% if user_signed_in? %>
           <%= link_to current_user.nickname, user_path(current_user), class: "header__right--btn" %>
           <%= link_to "New post", new_post_path, class: "header__right--btn" %>
@@ -26,13 +25,21 @@
       </div>
     </header>
       <div class="navbar">
-          My favorite place
+      <p>PICK UP List</p>
+        <p>
+          <a href="https://www.tokyodisneyresort.jp/">Tokyo Disney Resort</a>
+          <a href="https://store.disney.co.jp/">Disney Store</a>
+          <a href="https://twitter.com/disneyjp?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a>
+          <a href="https://www.instagram.com/tokyodisneyresort_official/?hl=ja">Instagram</a>
+        </p>
       </div>
       <div class="contents">
         <%= yield %>
       </div>
     <div class="footer">
-      my-Blog/Questo blog è stato creato da me
+    <a href="https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A9%E3%83%AB%E3%83%88%E3%83%BB%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC">Wolt Disney</a>
+     All our dreams can come true, if we have the courage to pursue them. I only hope that we don’t lose sight of one thing – that it was all started by a mouse.
+       （夢を求め続ける勇気さえあれば、すべての夢は必ず実現できる。いつだって忘れないでほしい。すべて一匹のねずみから始まったということを。）
     </div>
   </body>
 </html>

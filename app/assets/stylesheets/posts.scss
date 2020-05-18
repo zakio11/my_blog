@@ -29,14 +29,21 @@ body{
     }
   }
   .navbar {
-    height: 50px;
+    height: 400px;
     width: 100%;
+    color: azure;
     background-color:#6405a057;
+    background-image: url("https://www.cinemacafe.net/imgs/thumb_h1/473504.jpg");
     text-align: center;
     padding: 15px;
-    font-family: fantasy;
+    font-family: cursive;
+  }
+  a{
+    color: beige;
+    padding: 5px;
   }
   .contents{
+    margin: 30px auto 0;
     height: 600px;
     width: 80%;
     overflow: scroll;
@@ -66,12 +73,12 @@ body{
         }
         &__bottom{
           font-size: 15px;
-          color: #999;
+          color: black;
           display: flex;
           &--userName{
             &--btn{
               text-decoration: none;
-              color: #999;
+              color: black;
             }
           }
           &--date{
@@ -164,7 +171,8 @@ body{
   .footer{
     margin-top: 30px;
     background-color: #6405a057;
-    height: 60px;
+    background-image: url(https://www.tokyodisneyresort.jp/blog/wp-content/uploads/2018/12/faebf22a1731f7b251a280a7cc0b4364.jpg);
+    height: 520px;
     font-size: 20px;
     text-align: center;
     padding: 20px;
@@ -175,3 +183,6 @@ body{
     background-color: rgb(95, 116, 148);
   }
 
+
+
+ 
