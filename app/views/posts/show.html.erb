@@ -15,25 +15,29 @@
 <div class="postText">
   <%= simple_format @post.content %>
 </div>
-<div class="container">
+<div class="content_post" style="background-image: url(<%= @post.image %>);">
+</div>
+  <div class="container">
     <% if current_user %>
-      <%= form_with(model: [@post, @comment], local: true, id: "new_comment") do |form| %>
-        <%= form.text_area :text, placeholder: "コメントする", rows: "2", class: "textbox" %>
-        <%= form.submit "SEND", class: "form__submit" %>
+      <%= form_with(model: [@post, @comment], local: true) do |form| %>
+        <%= form.text_area :content, placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "SEND" %>
       <% end %>
     <% else %>
       <strong><p>※※※ Posting comments requires new registration / login ※※※</p></strong>
     <% end %>
 
-    <div class="comments">
+   <div class="comments">
       <h4>＜コメント一覧＞</h4>
       <% if @comments %>
         <% @comments.each do |comment| %>
           <p>
             <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
-            <%= comment.text %>
-          </p> 
+            <%= comment.content %>
+          </p>
         <% end %>
       <% end %>
     </div>
   </div>
+
+
