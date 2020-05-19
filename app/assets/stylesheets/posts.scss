@@ -161,6 +161,7 @@ body{
       display: block;
       width: 30%;
       margin: 15px auto 0;
+      border-radius: 20px;
     }
   }
   .user{
@@ -179,10 +180,31 @@ body{
     font-family:cursive;
   }
 
-  .form__submit{
-    background-color: rgb(95, 116, 148);
+  textarea{
+    width: 100%;
   }
 
+  .search-input {
+    width: 80%;
+    border-radius: 12px;
+  }
+
+  .search-btn{
+    border-radius: 20px;
+    background-color: rgb(66, 109, 228);
+    font-family: cursive;
+    text-decoration: underline;
+  }
+
+  .form{
+    width: 100%;
+  }
+
+  h4{
+    font-family: cursive;
+    text-align: center;
+    font-size: 20px;
+  }
 
 
  
