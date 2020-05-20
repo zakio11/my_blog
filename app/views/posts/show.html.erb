@@ -15,7 +15,7 @@
 <div class="postText">
   <%= simple_format @post.content %>
 </div>
-  
+
   <div class="container">
     <% if current_user %>
       <%= form_with(model: [@post, @comment], local: true) do |form| %>
